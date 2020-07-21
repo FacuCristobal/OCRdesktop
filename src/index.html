@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="bulma.min.css">
+    <link rel="stylesheet" href="index.css">
+    
+  </head>
+  <body>
+    <h1>ocr</h1>
+    <div class="columns main">
+      <img class="column" src="#" alt="">
+      <div class="column" id=""></div>
+    </div>
+    <progress class="progress" value="0" max="100" id="progbar"></progress>
+    <div id="status">asdasd</div>
+    <div class="file has-name is-boxed">
+      <label class="file-label">
+        <input class="file-input" type="file" name="resume" id="inImage">
+        <span class="file-cta">
+          <span class="file-icon">
+            <i class="fas fa-upload"></i>
+          </span>
+          <span class="file-label">
+            Elejir archivo…
+          </span>
+        </span>
+        <span class="file-name" id="filename">
+        </span>
+      </label>
+    </div>
+    <p></p>
+
+    <!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- normal script imports etc  -->
+<script src="jquery-3.5.1.min.js" charset="utf-8"></script>
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+
+    
+    <script defer src="render.js"></script>
+  </body>
+</html>
