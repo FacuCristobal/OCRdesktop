@@ -5,3 +5,15 @@ body {
   padding: 2rem;
   text-align: center;
 }
+
+.main-mech {
+  width: 100%;
+}
+
+.main-mech .select-file {
+  width: 100%;
+}
+
+.main-mech .updown {
+  width: 50%;
+}
