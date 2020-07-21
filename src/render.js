@@ -6,7 +6,7 @@ const worker = createWorker({
 });
 
 function showProgress(m) {
-  $("#progbar")[0].value = m.progress * 100;
+  $("#progbar").css("width", (m.progress * 100) + "%");
   $("#status")[0].innerHTML = m.status;
   console.log(m);
 };
