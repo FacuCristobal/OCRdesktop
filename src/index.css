@@ -28,3 +28,6 @@ body {
 .mitimiti textarea {
   text-align: center;
 }
+.btn.btn-secondary {
+  background-color:#0084ff;
+}
