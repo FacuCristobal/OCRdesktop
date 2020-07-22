@@ -1,7 +1,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: auto;
-  max-width: 38rem;
   padding: 2rem;
   text-align: center;
 }
@@ -16,4 +15,16 @@ body {
 
 .main-mech .updown {
   width: 50%;
+}
+
+.mitimiti {
+  width: 50%;
+}
+
+.tunga {
+  display: flex;
+}
+
+.mitimiti textarea {
+  text-align: center;
 }

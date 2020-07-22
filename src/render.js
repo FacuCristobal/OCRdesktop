@@ -32,3 +32,7 @@ function readImage(path, lang, name){
     await worker.terminate();
   })();
 };
+
+
+      
+
