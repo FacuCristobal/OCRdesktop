@@ -26,7 +26,7 @@ function readImage(path, lang, name){
     const { data: { text } } = await worker.recognize(path);
     console.log(text);
 
-    $( "p" ).append( "<span>" + text +"</span>" );
+    $( "#texto" ).append(text);
     $("#filename").html = name;
     await worker.terminate();
   })();
