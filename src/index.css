@@ -39,9 +39,6 @@ body {
 .mitimiti textarea {
   text-align: center;
 }
-
-.dropzone {
-  border: 2px dashed #0087F7;
-  border-radius: 5px;
-  background: white;
+.btn.btn-secondary {
+  background-color:#0084ff;
 }
