@@ -24,3 +24,7 @@ body {
 .tunga {
   display: flex;
 }
+
+.mitimiti textarea {
+  text-align: center;
+}
