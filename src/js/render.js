@@ -29,7 +29,7 @@ function readImage(path, lang, name){
     $( "#texto" ).append(text);
     $("#status")[0].innerHTML = "Completado";
     $("#filename").html = name;
-    await worker.terminate();
+    // await worker.terminate();
   })();
 };
 
