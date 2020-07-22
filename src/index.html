@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Typeador</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dropzone.css">
     <link rel="stylesheet" href="index.css">
     
   </head>
@@ -14,8 +15,11 @@
       <div class="column" id=""></div>
     </div>
    <div class="tunga">
-    <div class="mitimiti">
-      <input id="inImage" class="select-file" type="file">
+       <div class="mitimiti">
+         <div class="custom-file rikidrop">
+          <input class="custom-file-input rikidrop" type="file" id="inImage" >
+          <label class="custom-file-label" for="customFile">Choose file</label>
+         </div>
       <span id="filename">
      </span>
      </div>
@@ -56,14 +60,15 @@
 <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 
 <!-- normal script imports etc  -->
-<script src="jquery-3.5.1.min.js" charset="utf-8"></script>
-<script src="popper.js" charset="utf-8"></script>
-<script src="bootstrap.min.js" charset="utf-8"></script>
+<script src="js/jquery-3.5.1.min.js" charset="utf-8"></script>
+<script src="js/popper.js" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/dropzone.js" charset="utf-8"></script>
 
 <!-- Insert this line after script imports -->
 <script>if (window.module) module = window.module;</script>
 
     
-    <script defer src="render.js"></script>
+    <script defer src="js/render.js"></script>
   </body>
 </html>

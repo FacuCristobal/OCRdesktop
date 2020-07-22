@@ -13,18 +13,35 @@ body {
   width: 100%;
 }
 
+.rikidrop {
+  height: 100%;
+}
+
+.rikidrop input{
+  height: 100%;
+}
+
 .main-mech .updown {
   width: 50%;
 }
 
 .mitimiti {
   width: 50%;
+  padding: 0rem 1rem;
 }
 
 .tunga {
   display: flex;
+  min-width: 800px;
+  margin-bottom: 10px;
 }
 
 .mitimiti textarea {
   text-align: center;
+}
+
+.dropzone {
+  border: 2px dashed #0087F7;
+  border-radius: 5px;
+  background: white;
 }
