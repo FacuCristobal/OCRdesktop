@@ -33,6 +33,10 @@ function readImage(path, lang, name){
   })();
 };
 
-
-      
-
+$( ".rikidrop" ).hover(function() {
+  $( "#botong" ).fadeToggle();
+},
+function() {
+  $( "#botong" ).fadeToggle();
+}
+);

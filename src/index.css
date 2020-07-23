@@ -14,10 +14,19 @@ body {
 }
 
 .rikidrop {
-  height: 100%;
+  height: 90%;
 }
 
-.rikidrop input{
+.botonesGirar{
+  height: 10%;
+  width: 100%;
+}
+
+.botonesGirar .btn-group{
+  width: 100%;
+}
+
+.rikidrop input {
   height: 100%;
 }
 
@@ -38,7 +47,12 @@ body {
 
 .mitimiti textarea {
   text-align: center;
+  height: 100%;
 }
 .btn.btn-secondary {
   background-color:#0084ff;
+}
+
+#botong {
+  display: none;
 }
