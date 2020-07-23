@@ -56,3 +56,13 @@ body {
 #botong {
   display: none;
 }
+
+#texto {
+  border: solid #0084ff;
+  border-style: dashed;
+}
+
+#suki {
+  border: solid #0084ff;
+  border-style: dashed;
+}
