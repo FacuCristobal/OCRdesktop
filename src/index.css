@@ -20,6 +20,7 @@ body {
 .botonesGirar{
   height: 10%;
   width: 100%;
+  border: cornsilk;
 }
 
 .botonesGirar .btn-group{
@@ -46,7 +47,7 @@ body {
 }
 
 .mitimiti textarea {
-  text-align: center;
+  text-align: left;
   height: 100%;
 }
 .btn.btn-secondary {
@@ -57,12 +58,9 @@ body {
   display: none;
 }
 
-#texto {
+
+.mitimiti .rikidrop,.mitimiti textarea {
   border: solid #0084ff;
   border-style: dashed;
 }
 
-#suki {
-  border: solid #0084ff;
-  border-style: dashed;
-}
