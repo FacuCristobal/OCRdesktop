@@ -64,6 +64,6 @@ body {
   border-style: dashed;
 }
 
-img {
+img#logo {
   max-width: width 20rem; ;
 }
