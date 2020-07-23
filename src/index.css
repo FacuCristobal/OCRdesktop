@@ -59,7 +59,7 @@ body {
 }
 
 
-.mitimiti .rikidrop,.mitimiti textarea {
+.mitimiti.divImg,.mitimiti textarea {
   border: solid #0084ff;
   border-style: dashed;
 }
