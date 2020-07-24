@@ -60,3 +60,22 @@ function selectText(tere) {
   }
 
 }
+
+let dropArea = document.getElementById('suki')
+
+dropArea.addEventListener('dragenter', function(){
+  $("#suki").css("background-color", "black");
+}, false);
+
+dropArea.addEventListener('dragleave', function(){
+  $("#suki").css("background-color", "white");
+}, false);
+
+//dropArea.addEventListener('dragover', handlerFunction, false)
+dropArea.addEventListener('drop', function(){
+  
+}, false);
+
+$('#suki').click (function(){
+  $('#inImage')[0].click();
+} ); 

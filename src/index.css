@@ -5,6 +5,10 @@ body {
   text-align: center;
 }
 
+#inImage {
+  visibility: hidden;
+}
+
 .main-mech {
   width: 100%;
 }
@@ -14,7 +18,7 @@ body {
 }
 
 .rikidrop {
-  height: 90%;
+  height: 100%;
 }
 
 .botonesGirar{
@@ -25,10 +29,6 @@ body {
 
 .botonesGirar .btn-group{
   width: 100%;
-}
-
-.rikidrop input {
-  height: 100%;
 }
 
 .main-mech .updown {
@@ -57,13 +57,16 @@ body {
 
 #botong {
   display: none;
+  overflow: hidden;
 }
 
 
 .mitimiti .divImg,.mitimiti textarea {
-  border: solid #0084ff;
-  border-style: dashed;
   height: 100%;
+  outline: 2px dashed #9bcdfc;
+  outline-offset: 10px;
+  background-color: #e1eefa;
+  border: hidden;
 }
 
 img#logo {
