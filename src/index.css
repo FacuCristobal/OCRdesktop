@@ -37,7 +37,7 @@ body {
 
 .mitimiti {
   width: 50%;
-  padding: 0rem 1rem;
+  padding: 0rem 2rem;
 }
 
 .tunga {
@@ -59,9 +59,10 @@ body {
 }
 
 
-.mitimiti.divImg,.mitimiti textarea {
+.mitimiti .divImg,.mitimiti textarea {
   border: solid #0084ff;
   border-style: dashed;
+  height: 100%;
 }
 
 img#logo {
