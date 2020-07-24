@@ -92,3 +92,12 @@ img#logo {
 .botonesGirar {
   margin-bottom: 5rem;
 }
+
+#tuto {
+  position: absolute;
+
+}
+
+.modal {
+  position: fixed;
+}
