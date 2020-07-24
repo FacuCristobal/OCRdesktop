@@ -53,11 +53,14 @@ body {
 }
 .btn.btn-secondary {
   background-color:#0084ff;
+
 }
 
 #botong {
   display: none;
   overflow: hidden;
+  position: relative;
+  bottom: 10%;
 }
 
 
@@ -76,4 +79,8 @@ img#logo {
 .arras {
   margin: 0rem;
   padding: 0rem;
+}
+
+.botonesGirar {
+  margin-bottom: 5rem;
 }
