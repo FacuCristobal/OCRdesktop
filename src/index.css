@@ -87,6 +87,11 @@ img#logo {
 .arras {
   margin: 0rem;
   padding: 0rem;
+  cursor: default;
+  position: absolute;
+  top: 33rem;
+  left: 15vw;
+
 }
 
 .botonesGirar {
@@ -94,7 +99,9 @@ img#logo {
 }
 
 #tuto {
-  top: 31%;
+  top: 19rem;
+  left: 48vw;
+  position: absolute;
   
 
 }
@@ -102,3 +109,9 @@ img#logo {
 .modal {
   position: fixed;
 }
+
+#selec {
+  position: absolute;
+  right: 4rem;
+}
+
