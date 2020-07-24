@@ -65,8 +65,16 @@ body {
   height: 100%;
   outline: 2px dashed #9bcdfc;
   outline-offset: 10px;
+}
+
+.dragInactive {
   background-color: #e1eefa;
   border: hidden;
+}
+
+.dragHover {
+  background-color: white;
+  border: 2px dashed #e1eefa;
 }
 
 img#logo {

@@ -61,21 +61,43 @@ function selectText(tere) {
 
 }
 
-let dropArea = document.getElementById('suki')
+$('#suki').on('dragover',function(event){
+  event.preventDefault();
+  event.originalEvent.dataTransfer.dropEffect = "copy"})
+
+var dropArea = document.getElementById('suki');
+var dropzone = $('#suki');
 
 dropArea.addEventListener('dragenter', function(){
   $("#suki").css("background-color", "black");
 }, false);
 
+
 dropArea.addEventListener('dragleave', function(){
   $("#suki").css("background-color", "white");
 }, false);
 
-//dropArea.addEventListener('dragover', handlerFunction, false)
-dropArea.addEventListener('drop', function(){
-  
-}, false);
+//dropArea.addEventListener('dragover', function(e){}, false);
+
+dropzone.on('drop',function(e) {
+  var files = e.originalEvent.dataTransfer.files;
+
+  var path = $("#inImage")[0].files = files;
+  var path = $("#inImage")[0].files[0].path;
+  var name = $("#inImage")[0].files[0].name;
+  var lang = 'spa';
+  readImage(path, lang, name);
+	// Now select your file upload field 
+	// $('input_field_file').prop('files',files)
+  });
+
+//dropArea.addEventListener('drop', function(){
+  //console.log("wepa");
+  //$("#inImage").value = e.dataTransfer.files;
+  //console.log(e);
+//}, false);
 
 $('#suki').click (function(){
   $('#inImage')[0].click();
 } ); 
+
