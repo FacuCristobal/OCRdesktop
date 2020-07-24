@@ -40,3 +40,23 @@ function() {
   $( "#botong" ).fadeToggle();
 }
 );
+
+function selectText(tere) {
+  if (document.selection) {
+      let div = document.body.createTextRange();
+
+      div.moveToElementText(document.getElementById("texto"));
+      div.select();
+  }
+  else {
+      let div = document.createRange();
+      div.setStartBefore(document.getElementById("texto"));
+      div.setEndAfter(document.getElementById("texto"));
+      window.getSelection().removeAllRanges()
+      window.getSelection().addRange(div);
+      var res = document.execCommand('copy');
+      window.getSelection().removeRange(div);
+      
+  }
+
+}
