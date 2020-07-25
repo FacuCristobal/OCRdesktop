@@ -1,9 +1,16 @@
+import Tesseract from 'tesseract.js';
+
 const { createWorker } = require('tesseract.js');
+
+var files = [];
+
 
 const worker = createWorker({
 //  logger: m => console.log(m), // Add logger here
   logger: m => showProgress(m),
 });
+
+
 
 function showProgress(m) {
   $("#progbar").css("width", (m.progress * 100) + "%");
@@ -12,10 +19,21 @@ function showProgress(m) {
 };
 
 $("#inImage").change(function(){
-  var path = $("#inImage")[0].files[0].path;
-  var name = $("#inImage")[0].files[0].name;
-  var lang = 'spa';
-  readImage(path, lang, name);
+  var archivos = $("#inImage")[0].files;
+  var archivo = {};
+  for (let i = 0; i < archivos.length; i++) {
+    archivo.path = archivos[i].path;
+    archivo.name = archivos[i].name;
+    archivo.lang = 'spa';
+    files.push(archivo);
+  }
+  $("#status")[0].innerHTML = "listo pa' typear";
+});
+
+$("#typear").click(function(){
+  files.forEach(archivo => {
+    tese(archivo.path);
+  });
 });
 
 function readImage(path, lang, name){
@@ -32,6 +50,20 @@ function readImage(path, lang, name){
     // await worker.terminate();
   })();
 };
+
+import Tesseract from 'tesseract.js';
+
+function tese(img) {
+  Tesseract.recognize(
+    img,
+    'spa',
+    { logger: m => console.log(m) }
+  ).then(({ data: { text } }) => {
+    console.log(text);
+  })
+}
+
+
 
 $( ".divImg" ).hover(function() {
   $( "#botong" ).fadeToggle();
@@ -86,7 +118,8 @@ dropzone.on('drop',function(e) {
   var path = $("#inImage")[0].files[0].path;
   var name = $("#inImage")[0].files[0].name;
   var lang = 'spa';
-  readImage(path, lang, name);
+  $("#status")[0].innerHTML = "listo pa' typear";
+
 	// Now select your file upload field 
 	// $('input_field_file').prop('files',files)
   });
