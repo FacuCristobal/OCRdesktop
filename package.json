@@ -48,6 +48,7 @@
     "bootstrap-icons": "^1.0.0-alpha5",
     "bulma": "^0.9.0",
     "electron-squirrel-startup": "^1.0.0",
+    "file-saver": "^2.0.2",
     "tesseract.js": "^2.1.1"
   },
   "devDependencies": {
