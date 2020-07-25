@@ -93,7 +93,8 @@ function selectText(tere) {
 
 $('#suki').on('dragover',function(event){
   event.preventDefault();
-  event.originalEvent.dataTransfer.dropEffect = "copy"})
+  event.originalEvent.dataTransfer.dropEffect = "copy"});
+
 
 var dropArea = document.getElementById('suki');
 var dropzone = $('#suki');
@@ -110,11 +111,12 @@ dropArea.addEventListener('dragleave', function(){
 //dropArea.addEventListener('dragover', function(e){}, false);
 
 dropzone.on('drop',function(e) {
-  var files = e.originalEvent.dataTransfer.files;
+  var archs = e.originalEvent.dataTransfer.files;
 
-  var path = $("#inImage")[0].files = files;
-  var path = $("#inImage")[0].files[0].path;
-  var name = $("#inImage")[0].files[0].name;
+  for (let index = 0; index < archs.length; index++) {
+    files.push(archs[index]);
+  }
+
   var lang = 'spa';
   $("#status")[0].innerHTML = "listo pa' typear";
 
