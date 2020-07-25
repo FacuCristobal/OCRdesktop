@@ -1,6 +1,7 @@
-import Tesseract from 'tesseract.js';
-
 const { createWorker } = require('tesseract.js');
+
+var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
+//FileSaver.saveAs(blob, "hello world.txt");
 
 var files = [];
 
@@ -9,8 +10,6 @@ const worker = createWorker({
 //  logger: m => console.log(m), // Add logger here
   logger: m => showProgress(m),
 });
-
-
 
 function showProgress(m) {
   $("#progbar").css("width", (m.progress * 100) + "%");
@@ -50,8 +49,6 @@ function readImage(path, lang, name){
     // await worker.terminate();
   })();
 };
-
-import Tesseract from 'tesseract.js';
 
 function tese(img) {
   Tesseract.recognize(
