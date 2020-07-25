@@ -31,7 +31,7 @@ $("#inImage").change(function(){
 
 $("#typear").click(function(){
   files.forEach(archivo => {
-    tese(archivo.path);
+    readImage(archivo.path, archivo.lang, archivo.name);
   });
 });
 
@@ -51,6 +51,7 @@ function readImage(path, lang, name){
 };
 
 function tese(img) {
+  console.log("tese");
   Tesseract.recognize(
     img,
     'spa',
