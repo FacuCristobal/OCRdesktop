@@ -58,6 +58,7 @@ display: none;
 
 .mitimiti textarea {
   text-align: left;
+  resize: none;
   height: 100%;
 }
 .btn.btn-secondary {
