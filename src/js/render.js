@@ -30,7 +30,7 @@ $("#inImage").change(function(){
     archivo.name = archivos[i].name;
     archivo.lang = 'spa';
     console.log(archivo);
-    files.push(archivo);
+    files[i] = archivos[i].path;
   }
   var imagen = new Image();
   imagen.src = archivos[0].path;
@@ -64,7 +64,7 @@ function readImage(path){
 
     for (let index = 0; index < files.length; index++) {
       var element = files[index];
-      var { data: { text } } = await worker.recognize(element.path);
+      var { data: { text } } = await worker.recognize(element);
       
       $( "#texto" ).append(text);
     }
@@ -161,4 +161,6 @@ $('#suki').click (function(){
 // FILESAVER
 
 var blob = new Blob([$("#texto")[0].value], {type: "text/plain;charset=utf-8"});
-//FileSaver.saveAs(blob, "hello world.txt");
+//FileSaver.saveAs(blob, "transcripccion.txt");
+
+$("#guarderia").click(() => FileSaver.saveAs(blob, "transcripccion.txt"));
