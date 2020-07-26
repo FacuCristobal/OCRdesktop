@@ -1,10 +1,15 @@
 const { createWorker } = require('tesseract.js');
-
-var blob = new Blob(["Hello, world!"], {type: "text/plain;charset=utf-8"});
-//FileSaver.saveAs(blob, "hello world.txt");
+var FileSaver = require('file-saver');
 
 var files = [];
 
+var traduccion = '';
+
+function transcribe(){
+  files.forEach(element => {
+    tese(element.path);
+  });
+}
 
 const worker = createWorker({
 //  logger: m => console.log(m), // Add logger here
@@ -24,28 +29,47 @@ $("#inImage").change(function(){
     archivo.path = archivos[i].path;
     archivo.name = archivos[i].name;
     archivo.lang = 'spa';
+    console.log(archivo);
     files.push(archivo);
   }
+  var imagen = new Image();
+  imagen.src = archivos[0].path;
+  mostrarImagen(imagen);
   $("#status")[0].innerHTML = "listo pa' typear";
 });
 
+function mostrarImagen(img){
+  var oldImg = $("#suki img")[0];
+  if (oldImg) {
+    oldImg.remove();
+  }
+  
+  $("#suki").append(img);
+}
+
+
+
 $("#typear").click(function(){
-  files.forEach(archivo => {
-    readImage(archivo.path, archivo.lang, archivo.name);
-  });
+  $( "#texto" )[0].innerHTML = '';
+  readImage(files[0].path, files[0].lang, files[0].name);
 });
 
-function readImage(path, lang, name){
+function readImage(path){
   (async () => {
     await worker.load();
-    await worker.loadLanguage(lang);
-    await worker.initialize(lang);
-    const { data: { text } } = await worker.recognize(path);
-    console.log(text);
+    await worker.loadLanguage('eng');
+    await worker.initialize('eng');
+//    var { data: { text } } = await worker.recognize(path);
+//    console.log(text);
 
-    $( "#texto" ).append(text);
+    for (let index = 0; index < files.length; index++) {
+      var element = files[index];
+      var { data: { text } } = await worker.recognize(element.path);
+      
+      $( "#texto" ).append(text);
+    }
+    
     $("#status")[0].innerHTML = "Completado";
-    $("#filename").html = name;
     // await worker.terminate();
   })();
 };
@@ -134,3 +158,7 @@ $('#suki').click (function(){
   $('#inImage')[0].click();
 } ); 
 
+// FILESAVER
+
+var blob = new Blob([$("#texto")[0].value], {type: "text/plain;charset=utf-8"});
+//FileSaver.saveAs(blob, "hello world.txt");

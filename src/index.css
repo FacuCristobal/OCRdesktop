@@ -5,8 +5,17 @@ body {
   text-align: center;
 }
 
+canvas{
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
 #inImage {
-  visibility: hidden;
+display: none;
 }
 
 .main-mech {
@@ -53,7 +62,13 @@ body {
 }
 .btn.btn-secondary {
   background-color:#0084ff;
+}
 
+#suki img {
+  max-width: 80%;
+  max-height: 80%;
+  position: relative;
+  top: -1rem;
 }
 
 #botong {
@@ -88,10 +103,11 @@ img#logo {
   margin: 0rem;
   padding: 0rem;
   cursor: default;
-  position: absolute;
-  top: 33rem;
-  left: 15vw;
-
+  position: relative;
+  width: 100%;
+  color: #aaaaaa;
+  top: 7rem;
+}
 }
 
 .botonesGirar {
