@@ -5,6 +5,13 @@ body {
   text-align: center;
 }
 
+#suki {
+  justify-content: space-around;
+  flex-flow: column;
+  display: flex;
+  align-items: center;
+}
+
 canvas{
   display: none;
   height: 100%;
@@ -104,10 +111,8 @@ img#logo {
   margin: 0rem;
   padding: 0rem;
   cursor: default;
-  position: relative;
   width: 100%;
   color: #aaaaaa;
-  top: 7rem;
 }
 
 
