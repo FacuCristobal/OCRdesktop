@@ -2,11 +2,6 @@
 
 const { createWorker } = require('tesseract.js');
 
-const worker = createWorker({
-//  logger: m => console.log(m), // Add logger here
-  logger: m => showProgress(m),
-});
-
 function showProgress(m) { //Barra de progreso y status
   $("#progbar").css("width", (m.progress * 100) + "%");
   $("#status")[0].innerHTML = m.status;
@@ -15,9 +10,12 @@ function showProgress(m) { //Barra de progreso y status
 
 function readImage(path){ //Transcripcion tesseract
   (async () => {
+    const worker = createWorker({
+        logger: m => showProgress(m),
+      });
     await worker.load();
-    await worker.loadLanguage('eng');
-    await worker.initialize('eng');
+    await worker.loadLanguage('eng+spa');
+    await worker.initialize('eng+spa');
 //    var { data: { text } } = await worker.recognize(path);
 //    console.log(text);
 
@@ -29,7 +27,7 @@ function readImage(path){ //Transcripcion tesseract
     }
     
     $("#status")[0].innerHTML = "Completado";
-    // await worker.terminate(); // cuando se ejecuta el worker no transcribe mas
+    await worker.terminate();
   })();
 };
 
@@ -39,8 +37,6 @@ function readImage(path){ //Transcripcion tesseract
 var files = [];
 
 var FileSaver = require('file-saver');
-
-var imagen = new Image();
 
 $("#inImage").change(function(){ // Carga los archivos en la variable files y muestra la primer imagen
   var archivos = $("#inImage")[0].files;
@@ -52,19 +48,8 @@ $("#inImage").change(function(){ // Carga los archivos en la variable files y mu
     console.log(archivo);
     files[i] = archivos[i].path;
   }
-  imagen.src = archivos[0].path;
-  mostrarImagen(imagen);
   $("#status")[0].innerHTML = "listo pa' typear";
 });
-
-function mostrarImagen(img){
-  var oldImg = $("#suki img")[0];
-  if (oldImg) {
-    oldImg.remove();
-  }
-  
-  $("#suki").append(img);
-}
 
 $( ".divImg" ).hover(function() {
   $( "#botong" ).fadeToggle();
