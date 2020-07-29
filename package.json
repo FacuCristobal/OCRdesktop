@@ -2,7 +2,7 @@
   "name": "ocrdesktop",
   "productName": "ocrdesktop",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Reonocimiento de texto y transcripcion",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -20,7 +20,7 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "Images/logo.icns"
+        "icon": "../Images/logo.icns"
       },
       "makers": [
         {
