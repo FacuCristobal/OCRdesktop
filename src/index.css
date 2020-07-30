@@ -1,8 +1,20 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: auto;
-  padding: 2rem;
+  padding: 0px;
   text-align: center;
+}
+
+header {
+  height: 30vh;
+  width: 100vw;
+  min-width: 800px;
+}
+
+main {
+  height: 70vh;
+  width: 100vw;
+  min-width: 800px;
 }
 
 #suki {
@@ -10,6 +22,8 @@ body {
   flex-flow: column;
   display: grid;
   align-items: center;
+  position: relative;
+  top: -100%;
 }
 
 canvas{
@@ -54,13 +68,13 @@ display: none;
 .mitimiti {
   width: 50%;
   padding: 0rem 2rem;
-  height: 20rem;
+  height: 100%;
 }
 
 .tunga {
+  height: 80%;
   display: flex;
-  min-width: 800px;
-  margin-bottom: 10px;
+  margin-bottom: 4vh;
 }
 
 .mitimiti textarea {
@@ -86,6 +100,19 @@ display: none;
   bottom: 10%;
 }
 
+.divImg{
+  overflow: hidden;
+}
+
+.carga {
+  background-color:#0084ff;
+  opacity: 20%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: -100%;
+  z-index: 1;
+}
 
 .mitimiti .divImg,.mitimiti textarea {
   height: 100%;
@@ -104,7 +131,7 @@ display: none;
 }
 
 img#logo {
-  max-width:20rem; 
+  height: 100%;
 }
 
 .arras {
@@ -121,23 +148,38 @@ img#logo {
   margin-bottom: 5rem;
 }
 
-#tuto {
-  top: 19rem;
-  left: 48vw;
+#tuto {  
   position: absolute;
-  
-
+  top: 5px;
+  right: 5px;
 }
 
 .modal {
   position: fixed;
 }
 
-#selec {
-  position: absolute;
-  right: 4rem;
-}
-
 #typear {
   background-color: crimson;
+}
+
+.botonera, .botonesImg{
+  display: flex;
+  justify-content: center;
+}
+
+.botonera {
+  margin-top: 1vh;
+}
+
+.botonesImg input{
+  margin-right: 2vw;
+}
+
+.botonera div{
+  width: 50%;
+}
+
+#cvs{
+  height: 100%;
+  width: 100%;
 }

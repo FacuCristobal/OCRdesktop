@@ -118,6 +118,12 @@ dropzone.on('drop',function(e) {
   //console.log(e);
 //}, false);
 
+function AchicarLogo(){
+  $("#logo").animate({
+    
+  })
+}
+
 
 
 // FILESAVER
