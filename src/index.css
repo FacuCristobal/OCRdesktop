@@ -27,8 +27,6 @@ main {
 }
 
 canvas{
-  height: 200px;
-  width: 200px;
   position: relative;
   top: 0px;
   left: 0px;
@@ -177,9 +175,4 @@ img#logo {
 
 .botonera div{
   width: 50%;
-}
-
-#cvs{
-  height: 100%;
-  width: 100%;
 }

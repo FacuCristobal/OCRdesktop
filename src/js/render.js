@@ -48,6 +48,7 @@ $("#inImage").change(function(){ // Carga los archivos en la variable files y mu
     console.log(archivo);
     files[i] = archivos[i].path;
   }
+  loadImg();
   $("#status")[0].innerHTML = "listo pa' typear";
 });
 
@@ -105,7 +106,6 @@ dropzone.on('drop',function(e) {
     files.push(archs[index]);
   }
 
-  var lang = 'spa';
   $("#status")[0].innerHTML = "listo pa' typear";
 
 	// Now select your file upload field 

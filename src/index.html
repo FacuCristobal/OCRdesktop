@@ -24,8 +24,8 @@
         <div class="divImg">
           <div class="carga"></div>
           <div id="suki" class="rikidrop dragInactive">
+            <canvas id="canvas"></canvas>
             <input type="file" id="inImage" multiple>
-            <input type="file" id="inImage">
             <h5 class="arras"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cloud-arrow-down"
                 fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -73,7 +73,6 @@
     <div class="botonera">
       <div class="botonesImg">
         <input class="btn btn-primary" class="updown" type="button" value="Typear" id="typear">
-        <input class="updown" type="button" value="Guardar">
         <input class="updown" type="button" value="Subir">
         <input id="guarderia" class="updown" type="button" value="Guardar">
       </div>
@@ -123,6 +122,7 @@
   <script src="js/popper.js" charset="utf-8"></script>
   <script src='js/tesseract.min.js'></script>
   <script src="js/bootstrap.min.js" charset="utf-8"></script>
+  <script src="js/canvas.js" charset="utf-8"></script>
 
   <!-- Insert this line after script imports -->
   <script>if (window.module) module = window.module;</script>
